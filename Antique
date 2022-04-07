@@ -1,0 +1,45 @@
+Antique.h
+#pragma once
+#include<iostream>
+using namespace std;
+#include<string>
+class Antique
+{
+private:
+  string name;
+  float spe;
+public:
+ float Volume( float a, float b, float c);
+ float Volume(float r , float h);
+};
+  
+  Antique.cpp
+#include"Antique.h"
+#include<iostream>
+using namespace std;
+#include<string>
+#define PI 3.14
+float Antique::Volume(float a, float b, float c)
+{
+return a*b*c;
+}
+float Antique::Volume(float r , float h)
+{
+	return r*r*PI*h;
+}
+
+main.cpp
+#include"Antique.h"
+#include<iostream>
+using namespace std;
+#include<string>
+int main()
+{
+Antique a1,a2;
+float v1,v2;
+v1=a1.Volume(30.5,54.0,126.5);
+v2=a2.Volume(2.0,23.1);
+cout<<"莲鹤方壶的体积:"<<v1<<"立方厘米"<<"\n"<<"贾湖骨笛的体积："<<v2<<"立方厘米"<<endl;
+system("pause");
+return 0;
+}
